@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-iu4qf#u1g(gi+o2c4ub5$ala^oc62f6x25ktt5lyt)=xf37brs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['FPPMS.pythonanywhere.com']
+ALLOWED_HOSTS = ['yash15601.pythonanywhere.com', 'localhost']
+
 
 
 # Application definition
@@ -126,7 +127,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
-MEDIA_ROOT = '/home/FPPMS/FPPMS/media'
+MEDIA_ROOT = '/fanshaweprojectproposals/FPPMS/FPPMS/media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = '/home/FPPMS/FPPMS/static'
+STATIC_ROOT = '/fanshaweprojectproposals/FPPMS/FPPMS/static'
 STATIC_URL = '/static/'

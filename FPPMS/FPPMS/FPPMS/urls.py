@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.urls import include, url
+from django.urls import include, re_path
 from django.contrib import admin
 from django.urls import path
 from rest_framework import views
@@ -28,8 +28,8 @@ from django.views.static import serve
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    path('Insertproposal',mainviews.saveproposal,name="saveproposal"),   
+    re_path(r'^admin/', admin.site.urls),
+    path('Insertproposal',mainviews.saveproposal,name="saveproposal"),
     path('',mainviews.insertproposal, name="home"),
     path('displayProposal',adminportal_views.displayProposal,name="displayProposal"),
     path('proposals',adminportal_views.displayProposalList, name="proposals"),
@@ -46,11 +46,11 @@ urlpatterns = [
     path('updateProposal/<int:pk>', adminportal_views.update, name="updateProposal"),
     #path('api/password_reset/', include('django_rest_passwordreset.urls', namespace='password_reset')),
     #url(r'^download/(?P<path>.*)$',serve,{'document_root':settings.MEDIA_ROOT}),
-    
-    
+
+
     path('downloadfile/<str:filename>', adminportal_views.downloadproposalfile, name="downloadfile"),
-    
-    
+
+
 
 ]
 
